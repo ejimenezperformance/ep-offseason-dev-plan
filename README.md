@@ -1,23 +1,50 @@
 # EP Offseason Development Plan
 
-**From a Statcast decline to a 12-week strength plan — with the monitoring metric that proves whether it worked.**
-*De una caída en Statcast a un plan de fuerza de 12 semanas, con la métrica de monitoreo que demuestra si funcionó.*
+## Half of the biggest 2026 bat speed declines were not a strength problem.
+*La mitad de las mayores caídas de bat speed de 2026 no eran un problema de fuerza.*
 
-Emerson Performance (EP) · Emerson Jimenez
+Emerson Performance (EP) · Emerson Jimenez · Data: Baseball Savant
+
+---
+
+## Key findings / Hallazgos clave
+
+**1. 21 MLB hitters had a statistically confirmed bat speed decline in 2026** (first vs last 6 weeks, corrected for testing the whole league). **11 of them (52%) have an explanation other than strength loss:**
+*21 bateadores tuvieron una caída confirmada. **11 (52%) tienen otra explicación además de la fuerza:***
+
+| Cause / Causa | n |
+|---|---|
+| Clearly shorter swing (swing or approach change) / *Swing claramente más corto* | 7 |
+| Absence of 14+ days (possible IL) / *Ausencia de 14+ días (posible IL)* | 3 |
+| Known injury in the late window / *Lesión conocida en la ventana final* | 1 |
+| Possible force loss, with earlier injury / *Posible fuerza, con lesión previa* | 1 |
+| Possible force/efficiency loss, no other explanation found / *Posible fuerza, sin otra explicación* | 9 |
+
+→ Full table by hitter, with sources: [`output/decline_causes_summary.md`](output/decline_causes_summary.md)
+
+**2. Rest alone does not fix it.** Hitters with a confirmed decline in 2025 recovered a median of only **+0.1 mph** by early 2026 (league-adjusted, n = 21). Any offseason plan has to beat that, not just "improve."
+*El descanso solo no lo arregla: los bateadores con caída en 2025 recuperaron apenas +0.1 mph al inicio de 2026. Un plan tiene que superar eso, no solo "mejorar".*
+
+**3. Application case: Vaughn Grissom.** Bat speed fell **2.2 mph** (71.7 → 69.5) with a progressive decline, in a season that included an oblique strain (IL, early June). His plan rebuilds rotation progressively (anti-rotation → controlled rotation → ballistic) and counts as successful only if recovery exceeds **+0.6 mph**.
+*Caso de aplicación: Grissom perdió 2.2 mph, en una temporada con distensión de oblicuo. Su plan reconstruye la rotación de forma progresiva y solo es éxito si recupera más de +0.6 mph.*
+
+![Vaughn Grissom weekly bat speed, 2026](output/vaughn-grissom_bat_speed_trend.png)
+
+→ Full plan: [`output/vaughn-grissom_offseason_plan.md`](output/vaughn-grissom_offseason_plan.md)
 
 ---
 
 ## Why this repo / Por qué este repo
 
-Most public analytics work stops at the finding. A player development staff has to answer the next question: *what do we do about it this offseason, and how will we know it worked?* This repo connects both sides — the data and the weight room — using the EP four-layer template.
+Most public analytics work stops at the finding. A player development staff has to answer the next question: *what do we do about it this offseason, and how will we know it worked?* This repo connects both sides — the data and the weight room — using the EP four-layer template. It also shows when the weight room is **not** the answer.
 
-*La mayoría del análisis público termina en el hallazgo. Un staff de desarrollo tiene que responder la siguiente pregunta: qué hacemos en esta offseason y cómo sabremos si funcionó. Este repo une las dos partes, los datos y el gimnasio, con la plantilla de cuatro capas de EP.*
+*La mayoría del análisis público termina en el hallazgo. Un staff de desarrollo tiene que responder qué hacer en la offseason y cómo saber si funcionó. Este repo une los datos y el gimnasio, y también muestra cuándo el gimnasio **no** es la respuesta.*
 
 | Layer / Capa | What it does / Qué hace | File |
 |---|---|---|
 | 1. Data | Competitive swings, first 6 vs last 6 weeks of 2026 | `src/select_player.py` |
 | 2. Finding | Mann-Whitney + Benjamini-Hochberg + Cohen's d → `CONFIRMED` / `NOT CONFIRMED` | `src/select_player.py` |
-| 3. Biomechanics | Rule-based reading: **force** vs **efficiency** profile → `INTERPRETATION` | `src/diagnose.py` |
+| 3. Biomechanics | Rule-based reading: **force**, **efficiency** or **swing change** profile, plus injury/absence filter → `INTERPRETATION` | `src/diagnose.py`, `src/run_pipeline.py` |
 | 4. Training | 12-week block, emphasis changes by profile | `src/plan_builder.py` |
 | 5. Monitoring | Required: bat sensor. Recommended: med ball, CMJ height. Optional: force-plate RFD. 2027 follow-up vs natural rebound threshold | `src/plan_builder.py`, `src/natural_rebound.py` |
 
