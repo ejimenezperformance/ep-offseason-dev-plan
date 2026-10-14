@@ -1,3 +1,4 @@
 data/*.csv
+!data/injury_exclusions.csv
 __pycache__/
 *.pyc
