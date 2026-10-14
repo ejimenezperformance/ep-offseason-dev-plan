@@ -1,0 +1,14 @@
+{
+  "n_decliners": 21,
+  "n_controls": 164,
+  "league_shift_mph": 0.26,
+  "median_recovery_mph": 0.37,
+  "median_recovery_adj_mph": 0.11,
+  "iqr_recovery_adj_mph": [
+    -0.44,
+    0.61
+  ],
+  "median_pct_recovered": 0.23,
+  "pct_full_recovery": 0.19,
+  "reliable": true
+}
