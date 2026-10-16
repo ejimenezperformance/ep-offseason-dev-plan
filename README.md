@@ -20,6 +20,8 @@ Emerson Performance (EP) · Emerson Jimenez · Data: Baseball Savant
 | Possible force loss, with earlier injury / *Posible fuerza, con lesión previa* | 1 |
 | Possible force/efficiency loss, no other explanation found / *Posible fuerza, sin otra explicación* | 9 |
 
+![21 confirmed bat speed declines by likely explanation](output/decline_causes_chart.png)
+
 → Full table by hitter, with sources: [`output/decline_causes_summary.md`](output/decline_causes_summary.md)
 
 **2. Small natural rebound in the decliners.** The 21 hitters with a confirmed decline in 2025 recovered a median of only **+0.1 mph** by early 2026 (league-adjusted). This sets the success threshold for an offseason plan. It is a small-sample result for that group only; see finding 4 for the league-wide picture.
