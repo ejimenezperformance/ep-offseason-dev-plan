@@ -22,8 +22,8 @@ Emerson Performance (EP) · Emerson Jimenez · Data: Baseball Savant
 
 → Full table by hitter, with sources: [`output/decline_causes_summary.md`](output/decline_causes_summary.md)
 
-**2. Rest alone does not fix it.** Hitters with a confirmed decline in 2025 recovered a median of only **+0.1 mph** by early 2026 (league-adjusted, n = 21). Any offseason plan has to beat that, not just "improve."
-*El descanso solo no lo arregla: los bateadores con caída en 2025 recuperaron apenas +0.1 mph al inicio de 2026. Un plan tiene que superar eso, no solo "mejorar".*
+**2. Small natural rebound in the decliners.** The 21 hitters with a confirmed decline in 2025 recovered a median of only **+0.1 mph** by early 2026 (league-adjusted). This sets the success threshold for an offseason plan. It is a small-sample result for that group only; see finding 4 for the league-wide picture.
+*Recuperación natural pequeña en los que cayeron: los 21 bateadores con caída en 2025 recuperaron apenas +0.1 mph al inicio de 2026. Define el umbral de éxito del plan. Es una muestra pequeña de ese grupo; ver el hallazgo 4 para la liga completa.*
 
 **3. Application case: Vaughn Grissom.** Bat speed fell **2.2 mph** (71.7 → 69.5) with a progressive decline, in a season that included an oblique strain (IL, early June). His plan rebuilds rotation progressively (anti-rotation → controlled rotation → ballistic) and counts as successful only if recovery exceeds **+0.6 mph**.
 *Caso de aplicación: Grissom perdió 2.2 mph, en una temporada con distensión de oblicuo. Su plan reconstruye la rotación de forma progresiva y solo es éxito si recupera más de +0.6 mph.*
@@ -31,6 +31,19 @@ Emerson Performance (EP) · Emerson Jimenez · Data: Baseball Savant
 ![Vaughn Grissom weekly bat speed, 2026](output/vaughn-grissom_bat_speed_trend.png)
 
 → Full plan: [`output/vaughn-grissom_offseason_plan.md`](output/vaughn-grissom_offseason_plan.md)
+
+**4. For projection, don't overreact to September.** Across **225 hitters** (2025 → 2026), bat speed in the last 6 weeks did **not** predict next season better than the full-season mean — `NOT CONFIRMED` (null result).
+
+| Target (2026) | Full-season mean, LOO MAE | Last 6 weeks, LOO MAE | Difference, 95% CI |
+|---|---|---|---|
+| First 6 weeks | 0.755 mph | 0.786 mph | −0.031 [−0.086, +0.023] |
+| Full season | 0.712 mph | 0.769 mph | −0.056 [−0.112, +0.000] |
+
+For the full season the difference leans toward the full-season mean, right at the edge of significance. Adding the late window to the full-season mean barely helps (0.709 vs 0.712). **Takeaway for projection: the full-season mean remains the better reference; a late-season drop alone is not a reason to lower next year's bat speed expectation.** Why the 21 decliners recovered little while the league-wide test shows no carry-over is open: the late window has far fewer swings (noisier), and decliners are a small subset — `INTERPRETATION`, not tested.
+
+*Para proyectar, no sobrerreaccionar a septiembre: en 225 bateadores, las últimas 6 semanas no predicen la temporada siguiente mejor que el promedio de toda la temporada (resultado nulo). El promedio de temporada sigue siendo la mejor referencia.*
+
+→ Details: [`output/projection_summary.md`](output/projection_summary.md) — `python src/projection.py --prev data/statcast_2025.csv --next data/statcast_2026.csv`
 
 ---
 
