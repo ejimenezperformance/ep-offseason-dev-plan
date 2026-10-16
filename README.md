@@ -1,7 +1,7 @@
 # EP Offseason Development Plan
 
-## Half of the biggest 2026 bat speed declines were not a strength problem.
-*La mitad de las mayores caídas de bat speed de 2026 no eran un problema de fuerza.*
+## Half of the biggest 2026 bat speed declines came with a shorter swing, an injury or an IL-length absence — not just strength loss.
+*La mitad de las mayores caídas de bat speed de 2026 vinieron con un swing más corto, una lesión o una ausencia — no solo pérdida de fuerza.*
 
 Emerson Performance (EP) · Emerson Jimenez · Data: Baseball Savant
 
@@ -9,8 +9,8 @@ Emerson Performance (EP) · Emerson Jimenez · Data: Baseball Savant
 
 ## Key findings / Hallazgos clave
 
-**1. 21 MLB hitters had a statistically confirmed bat speed decline in 2026** (first vs last 6 weeks, corrected for testing the whole league). **11 of them (52%) have an explanation other than strength loss:**
-*21 bateadores tuvieron una caída confirmada. **11 (52%) tienen otra explicación además de la fuerza:***
+**1. 21 MLB hitters had a statistically confirmed bat speed decline in 2026** (first vs last 6 weeks, corrected for testing the whole league). **11 of them (52%) came with another likely explanation besides strength loss:**
+*21 bateadores tuvieron una caída confirmada. **11 (52%) vinieron con otra explicación probable además de la fuerza:***
 
 | Cause / Causa | n |
 |---|---|
